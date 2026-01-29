@@ -1,0 +1,53 @@
+@font-face {
+  font-family: Merienda;
+  src:
+    url(../assets/fonts/Merienda-VariableFontwght.woff2) format(woff2),
+    url(../assets/fonts/Merienda-VariableFontwght.woff) format(woff);
+}
+
+:root {
+  --mainBGImg: url("../assets/images/mainBG.webp");
+
+  --clrTomatoRed: #ca0000;
+  --clrText: #cfcfcf;
+
+  --fontSize1: clamp(0.8rem, calc(5dvw + 0.8rem), 2.5rem);
+
+  --fontSize3: clamp(0.3rem, calc(1dvw + 0.6rem), 1rem);
+
+  --cutClipPath1: polygon(
+    5% 0%,
+    95% 0%,
+    100% 10%,
+    100% 90%,
+    95% 100%,
+    5% 100%,
+    0% 90%,
+    0% 10%
+  );
+  --cutClipPath2: polygon(
+    10% 0%,
+    90% 0%,
+    100% 20%,
+    100% 80%,
+    90% 100%,
+    10% 100%,
+    0% 80%,
+    0% 20%
+  );
+}
+
+* {
+  border: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-inline-start: 0;
+  padding-inline-start: 0;
+  text-decoration: none;
+  color: inherit;
+  box-sizing: border-box;
+  font-family: Merienda;
+  color: var(--clrText);
+}

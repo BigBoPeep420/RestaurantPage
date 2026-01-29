@@ -1,0 +1,45 @@
+body {
+  background-image: var(--mainBGImg);
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: clamp(calc(0% - 300px), 50%, 70%) 0px;
+  background-color: bisque;
+  height: 100dvh;
+  display: grid;
+  grid-template: 1fr 2.5fr min-content / 100dvw;
+
+  header {
+    grid-row: 1 / 2;
+    width: 100dvw;
+    height: clamp(fit-content, 50dvh, 350px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0px;
+
+    #siteTitle {
+      width: min-content;
+    }
+
+    nav {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  #content {
+    background-color: #000000ab;
+    grid-row: 2 / 3;
+    width: min(800px, 80dvw);
+    justify-self: center;
+    border-radius: 0.8rem;
+  }
+
+  footer {
+    grid-row: 3 / -1;
+  }
+}

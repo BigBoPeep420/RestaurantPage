@@ -1,0 +1,26 @@
+button {
+  width: calc(var(--fontSize1) * 2.5);
+  height: calc(var(--fontSize1) * 2.5);
+  background-image: url("../../assets/images/tomatoSlice.webp");
+  background-size: 100% 100%;
+  background-color: transparent;
+  border-radius: 50%;
+  filter: drop-shadow(2px 4px 5px #000000d7);
+  position: relative;
+
+  span {
+    background-color: rgb(
+      from var(--clrTomatoRed) calc(r * 0) calc(g * 0.5) calc(b * 0.5) / 0.6
+    );
+    clip-path: var(--cutClipPath2);
+    display: block;
+    height: min-content;
+    position: absolute;
+    top: calc(0px + 30%);
+    left: 50%;
+    translate: -50% 0;
+    font-size: var(--fontSize3);
+    padding: 0.1rem 0.2rem;
+    border-radius: 0.2rem;
+  }
+}
