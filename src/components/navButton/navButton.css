@@ -1,26 +1,135 @@
-button {
-  width: calc(var(--fontSize1) * 2.5);
-  height: calc(var(--fontSize1) * 2.5);
-  background-image: url("../../assets/images/tomatoSlice.webp");
-  background-size: 100% 100%;
-  background-color: transparent;
-  border-radius: 50%;
+.navButton {
   filter: drop-shadow(2px 4px 5px #000000d7);
-  position: relative;
 
-  span {
-    background-color: rgb(
-      from var(--clrTomatoRed) calc(r * 0) calc(g * 0.5) calc(b * 0.5) / 0.6
-    );
-    clip-path: var(--cutClipPath2);
-    display: block;
-    height: min-content;
-    position: absolute;
-    top: calc(0px + 30%);
-    left: 50%;
-    translate: -50% 0;
-    font-size: var(--fontSize3);
-    padding: 0.1rem 0.2rem;
-    border-radius: 0.2rem;
+  button {
+    width: calc(var(--fontSize1) * 2.5);
+    height: calc(var(--fontSize1) * 2.5);
+    background-image: url("../../assets/images/tomatoSlice.webp");
+    background-size: 100% 100%;
+    background-color: transparent;
+    border-radius: 50%;
+    position: relative;
+
+    span {
+      background-color: rgb(
+        from var(--clrTomatoRed) calc(r * 0) calc(g * 0.5) calc(b * 0.5) / 0.6
+      );
+      clip-path: var(--cutClipPath2);
+      display: block;
+      height: min-content;
+      position: absolute;
+      top: calc(0px + 30%);
+      left: 50%;
+      translate: -50% 0;
+      font-size: var(--fontSize3);
+      padding: 0.1rem 0.2rem;
+      border-radius: 0.2rem;
+    }
   }
 }
+
+.navButton.selected {
+  button {
+    animation: bite 1s linear forwards;
+    mask-size: cover;
+    mask-composite: intersect;
+  }
+}
+.navButton.selected::after {
+  content: "";
+  position: absolute;
+  bottom: -10%;
+  left: 10%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle,
+    rgba(139, 80, 80, 0.4) 60%,
+    transparent 70%
+  );
+  transform: scaleX(0.7);
+  z-index: -1;
+  opacity: 0;
+  animation: juiceOut 1s ease-out 1s forwards;
+}
+
+@keyframes bite {
+  0% {
+  }
+  15% {
+    scale: 1;
+  }
+  20% {
+    scale: 1.1;
+  }
+  22% {
+    scale: 1.1;
+    mask-image: radial-gradient(circle at 85% 90%, transparent 20%, black 21%);
+  }
+  24% {
+    scale: 1.1;
+  }
+  29% {
+    scale: 1;
+  }
+  34% {
+    scale: 1;
+  }
+  39% {
+    scale: 1.1;
+  }
+  41% {
+    scale: 1.1;
+    mask-image:
+      radial-gradient(circle at 85% 90%, transparent 20%, black 21%),
+      radial-gradient(circle at 50% 85%, transparent 25%, black 26%);
+    mask-composite: intersect;
+  }
+  43% {
+    scale: 1.1;
+  }
+  48% {
+    scale: 1;
+  }
+  53% {
+    scale: 1;
+  }
+  58% {
+    scale: 1.1;
+  }
+  90% {
+    scale: 1.1;
+    mask-image:
+      radial-gradient(circle at 85% 90%, transparent 20%, black 21%),
+      radial-gradient(circle at 50% 85%, transparent 25%, black 26%),
+      radial-gradient(circle at 20% 95%, transparent 20%, black 21%);
+    mask-composite: intersect;
+  }
+  92% {
+    scale: 1.1;
+  }
+
+  100% {
+    scale: 1;
+    mask-image:
+      radial-gradient(circle at 85% 90%, transparent 20%, black 21%),
+      radial-gradient(circle at 50% 85%, transparent 25%, black 26%),
+      radial-gradient(circle at 20% 95%, transparent 20%, black 21%);
+    mask-composite: intersect;
+  }
+}
+@keyframes juiceOut {
+  from {
+    opacity: 0;
+    scale: 0.2 0.1;
+  }
+  to {
+    opacity: 1;
+    scale: 0.7 0.7;
+  }
+}
+
+/* mask-image:
+      radial-gradient(circle at 85% 90%, transparent 20%, black 21%),
+      radial-gradient(circle at 50% 85%, transparent 25%, black 26%),
+      radial-gradient(circle at 20% 95%, transparent 20%, black 21%); */

@@ -17,13 +17,15 @@ nav.append(
 
 async function navigate(viewName) {
   try {
-    const mod = await import(`./views/${viewName}.js`);
-    elems.content.replaceChildren();
-    elems.content.appendChild(mod.default());
+    const module = await import(`./views/${viewName}.js`);
+    if (module) {
+      elems.content.replaceChildren();
+      elems.content.appendChild(module.default());
+    }
   } catch (error) {
     console.log(error);
-    const mod = await import("./views/home.js");
     elems.content.replaceChildren();
-    elems.content.appendChild(mod.default());
+    const home = await import("./views/home.js");
+    elems.content.appendChild(home.default());
   }
 }
