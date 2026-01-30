@@ -1,31 +1,33 @@
 import "./styles/main.css";
 import "./styles/layout.css";
-import { createSiteTitle } from "./components/siteTitle/siteTitle.js";
-import * as navButton from "./components/navButton/navButton.js";
+import { default as siteTitle } from "./components/siteTitle/siteTitle.js";
+import { default as navButton } from "./components/navButton/navButton.js";
 
 const d = document;
 const elems = { content: d.getElementById("content") };
 
-d.getElementById("siteTitle").append(createSiteTitle("Sue's Sous Vide"));
+d.getElementById("siteTitle").append(siteTitle("Sue's Sous Vide"));
 const nav = d.querySelector("nav");
 nav.append(
-  navButton.default("Home", "home", navigate),
-  navButton.default("About", "about", navigate),
-  navButton.default("Menu", "menu", navigate),
-  navButton.default("Contact", "contact", navigate),
+  navButton("Home", "home", navigate),
+  navButton("About", "about", navigate),
+  navButton("Menu", "menu", navigate),
+  navButton("Contact", "contact", navigate),
 );
+
+d.querySelector(".navButton.home button").dispatchEvent(new Event("click"));
 
 async function navigate(viewName) {
   try {
     const module = await import(`./views/${viewName}.js`);
     if (module) {
       elems.content.replaceChildren();
-      elems.content.appendChild(module.default());
+      elems.content.appendChild(module.default(navigate));
     }
   } catch (error) {
     console.log(error);
     elems.content.replaceChildren();
     const home = await import("./views/home.js");
-    elems.content.appendChild(home.default());
+    elems.content.appendChild(home.default(navigate));
   }
 }

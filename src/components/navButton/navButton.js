@@ -5,7 +5,7 @@ export default function (text = "Default", viewName = "home", navigate) {
   const butCont = d.createElement("div");
   const but = d.createElement("button");
   but.type = "button";
-  butCont.classList.add("navButton");
+  butCont.classList.add("navButton", viewName);
   butCont.append(but);
   const sp = d.createElement("span");
   sp.append((d.createElement("p").textContent = text));

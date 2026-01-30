@@ -9,11 +9,14 @@
   --mainBGImg: url("../assets/images/mainBG.webp");
 
   --clrTomatoRed: #ca0000;
+  --clrButtonGreen: #3c6813;
+  --clrHLNeut: #888888;
+  --clrTransparentBG: #00000069;
   --clrText: #cfcfcf;
 
   --fontSize1: clamp(0.8rem, calc(5dvw + 0.8rem), 2.5rem);
 
-  --fontSize3: clamp(0.3rem, calc(1dvw + 0.6rem), 1rem);
+  --fontSize3: clamp(0.3rem, calc(1dvw + 0.4rem), 1rem);
 
   --cutClipPath1: polygon(
     5% 0%,

@@ -1,9 +1,9 @@
 import "./siteTitle.css";
 
-export function createSiteTitle(title = "Default") {
+export default function (title = "Default") {
   const d = document;
   const t = d.createElement("div");
-  t.classList.add("title");
+  t.classList.add("siteTitle");
   const i = d.createElement("div");
   i.classList.add("inner");
   const tx = d.createElement("p");

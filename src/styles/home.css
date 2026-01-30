@@ -1,0 +1,58 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+
+  .hero {
+    width: 50%;
+    justify-self: center;
+    filter: drop-shadow(0px 0px 15px #000);
+    .frame {
+      display: flex;
+      background-color: var(--clrHLNeut);
+      clip-path: polygon(
+        10% 0%,
+        90% 0%,
+        100% 15%,
+        100% 85%,
+        90% 100%,
+        10% 100%,
+        0% 85%,
+        0% 15%
+      );
+      overflow: hidden;
+      padding: 0.3rem;
+
+      img {
+        clip-path: polygon(
+          10% 0%,
+          90% 0%,
+          100% 15%,
+          100% 85%,
+          90% 100%,
+          10% 100%,
+          0% 85%,
+          0% 15%
+        );
+        width: 100%;
+      }
+    }
+    figcaption {
+      justify-self: center;
+      font-size: var(--fontSize3);
+      margin-top: 0.5rem;
+    }
+  }
+
+  .hoursOfOperation {
+    justify-self: center;
+  }
+
+  .dailySpecials {
+    width: 85%;
+  }
+
+  .bookReservation {
+  }
+}
