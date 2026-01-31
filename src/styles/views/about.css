@@ -11,6 +11,7 @@
     font-size: calc(var(--fontSize2) * 0.8);
     padding: 1rem;
     border-radius: 0.5rem;
+    text-indent: 1rem;
 
     p:first-of-type::first-letter {
       color: var(--clrTomatoRed);

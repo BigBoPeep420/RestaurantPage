@@ -31,4 +31,5 @@ async function navigate(viewName) {
     const home = await import("./views/home.js");
     elems.content.appendChild(home.default(navigate));
   }
+  elems.content.scrollTo(0, 0);
 }

@@ -1,0 +1,132 @@
+body {
+  #content {
+    padding: 0;
+  }
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: var(--fontSize3);
+
+  --sectionHeaderHeight: 8dvh;
+
+  .subsubsectionHeader {
+    font-size: calc(var(--fontSize2) * 0.7);
+    font-weight: 900;
+    font-style: italic;
+    margin-bottom: 1em;
+    background-color: var(--clrTransparentBG);
+    padding: 0.5em;
+    border-radius: 0.5em;
+    text-align: center;
+  }
+
+  .menuOption {
+    padding: 0.5em;
+    background-color: var(--clrTransparentBG);
+    display: grid;
+    grid-template: min-content auto min-content / auto min-content;
+    border-radius: 0.5rem;
+
+    .name {
+      font-weight: 700;
+      grid-area: 1/1/2/-1;
+    }
+
+    .description {
+      font-size: calc(var(--fontSize3) * 0.85);
+      font-weight: 100;
+      grid-area: 2/1/3/-1;
+    }
+
+    .price {
+      grid-area: 3/2/-1/-1;
+    }
+
+    .allergens {
+      font-size: calc(var(--fontSize3) * 0.7);
+      font-weight: 100;
+      align-self: flex-end;
+    }
+  }
+
+  .menuOption + .menuOption {
+    margin-top: 1em;
+  }
+
+  .menuSection {
+    padding: 0 1em 1em 1em;
+
+    .sectionHeader {
+      font-size: calc(var(--fontSize2) * 1.2);
+      font-weight: 700;
+      height: var(--sectionHeaderHeight);
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+      text-align: center;
+      background-color: #111;
+      margin: 0 -1em 1em -1em;
+      align-content: center;
+      z-index: 10;
+    }
+
+    .optionsGrid {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .menuSection + .menuSection {
+    margin-top: 1em;
+  }
+
+  .beverages {
+    .subsectionHeader {
+      font-size: calc(var(--fontSize2) * 0.7);
+      font-weight: 900;
+      position: sticky;
+      top: var(--sectionHeaderHeight);
+      height: 6dvh;
+      text-align: center;
+      background-color: #111;
+      margin: 0 -1em 1em -1em;
+      align-content: center;
+    }
+
+    .nonSpecialtyBeverages {
+      .options {
+        font-weight: 500;
+        font-size: calc(var(--fontSize2) * 0.7);
+
+        span {
+          font-weight: 100;
+          font-size: calc(var(--fontSize2) * 0.55);
+        }
+      }
+
+      .price,
+      .prices {
+        margin-top: 1em;
+        font-size: calc(var(--fontSize2) * 0.7);
+
+        span {
+          font-size: calc(var(--fontSize2) * 0.5);
+          font-weight: 100;
+        }
+      }
+
+      .alcoholic {
+        margin: 1.5em 0;
+      }
+    }
+
+    .specialtyBeverages {
+      .alcoholic {
+        margin-top: 1.5em;
+      }
+    }
+  }
+}

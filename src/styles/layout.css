@@ -42,6 +42,7 @@ body {
     overflow-y: auto;
     overflow-x: hidden;
     padding: 1.5rem;
+    anchor-name: --contentAnc;
   }
 
   footer {
