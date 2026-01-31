@@ -15,7 +15,7 @@
   --clrText: #cfcfcf;
 
   --fontSize1: clamp(0.8rem, calc(5dvw + 0.8rem), 2.5rem);
-
+  --fontSize2: clamp(0.5rem, calc(2.5dvw + 0.5rem), 1.5rem);
   --fontSize3: clamp(0.3rem, calc(1dvw + 0.4rem), 1rem);
 
   --cutClipPath1: polygon(

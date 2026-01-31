@@ -1,0 +1,35 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+
+  .textSection {
+    background-color: var(--clrTransparentBG);
+    display: flex;
+    flex-direction: column;
+    font-size: calc(var(--fontSize2) * 0.8);
+    padding: 1rem;
+    border-radius: 0.5rem;
+
+    p:first-of-type::first-letter {
+      color: var(--clrTomatoRed);
+      font-size: calc(var(--fontSize2) * 1.2);
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    p + p {
+      margin-top: 1rem;
+    }
+
+    .signature {
+      align-self: flex-end;
+      margin-top: 0.5rem;
+      svg {
+        fill: var(--clrText);
+        height: calc(var(--fontSize1) * 1.6);
+      }
+    }
+  }
+}

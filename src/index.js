@@ -18,6 +18,7 @@ nav.append(
 d.querySelector(".navButton.home button").dispatchEvent(new Event("click"));
 
 async function navigate(viewName) {
+  if (viewName == "#") return;
   try {
     const module = await import(`./views/${viewName}.js`);
     if (module) {

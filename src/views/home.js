@@ -1,6 +1,6 @@
 import { default as dailySpecials } from "../components/dailySpecials/dailySpecials.js";
 import { default as hoursOfOp } from "../components/hoursOfOp/hoursOfOp.js";
-import "../styles/home.css";
+import "../styles/views/home.css";
 import citrusSear from "../assets/images/citrusCloverSear.webp";
 import { default as bookReservation } from "../components/bookReservation/bookReservation.js";
 

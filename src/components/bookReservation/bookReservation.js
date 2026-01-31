@@ -15,9 +15,5 @@ export default function (navigate) {
   btn.innerHTML = iconBookEdit;
   div.appendChild(btn);
 
-  btn.addEventListener("click", (e) => {
-    navigate("bookTable");
-  });
-
   return div;
 }
