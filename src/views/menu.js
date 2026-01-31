@@ -1,4 +1,5 @@
 import "../styles/views/menu.css";
+import { default as dailySpecials } from "../components/dailySpecials/dailySpecials.js";
 
 const menuOptions = {
   "Main Courses": [
@@ -346,7 +347,7 @@ export default function () {
   menuOptions.Beverages.forEach((bev) => {
     const opt = dc("div");
     opt.className = "menuOption";
-    opt.innerHTML = `<p class="name">${bev.name}</p><p class="description">${bev.desc}</p><p class="price">${bev.price}</p>`;
+    opt.innerHTML = `<p class="name">${bev.name}</p><p class="description">${bev.desc}</p><p class="price">$${bev.price}</p>`;
 
     if (bev.alcoholic == true) alcSec.appendChild(opt);
     else nonAlcSec.appendChild(opt);
@@ -355,14 +356,6 @@ export default function () {
   specSect.append(nonAlcSec, alcSec);
   bevSect.appendChild(specSect);
 
-  outer.appendChild(bevSect);
+  outer.append(bevSect, dailySpecials());
   return outer;
 }
-
-/*
-
-Venison Saddle, Pacific Drift Octopus, Sous-Steak Cauliflower, Sous-Fried Chicken Thighs,
-    Herb Garden Loin, Butter-Poached Lobster, 145° Egg Carbonara
-
-
-*/

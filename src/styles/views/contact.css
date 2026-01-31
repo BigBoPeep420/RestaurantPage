@@ -1,0 +1,110 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+
+  .commentSection {
+    background-color: var(--clrTransparentBG);
+    width: min(500px, 90%);
+    font-size: var(--fontSize2);
+    padding: 0.5em 1em 1em;
+    border-radius: 0.5em;
+
+    .title {
+      justify-self: start;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      margin-top: 0.5em;
+      gap: 0.5em;
+
+      input,
+      textarea {
+        font-size: calc(var(--fontSize2) * 0.8);
+        background-color: var(--clrTransparentBG);
+        padding: 0.5em;
+        border-radius: 0.5em;
+      }
+
+      textarea {
+        resize: none;
+        height: 150%;
+      }
+
+      button {
+        font-size: calc(var(--fontSize2) * 0.9);
+        align-self: center;
+        padding: 0.3em 0.5em;
+        border-radius: 0.5em;
+        background-color: var(--clrButtonGreen);
+      }
+    }
+  }
+
+  .phoneSection {
+    background-color: var(--clrTransparentBG);
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: calc(var(--fontSize2) * 0.9);
+    border-radius: 0.5em;
+    padding: 0.5em;
+    gap: 0.3em;
+
+    .title {
+      font-weight: 900;
+    }
+
+    .note {
+      font-size: calc(var(--fontSize2) * 0.6);
+      font-weight: 100;
+      font-style: italic;
+    }
+
+    .phone {
+      font-size: var(--fontSize2);
+      font-weight: 900;
+    }
+  }
+
+  .contactSection {
+    background-color: var(--clrTransparentBG);
+    width: min(500px, 90%);
+    border-radius: 0.5em;
+    font-size: calc(var(--fontSize2) * 0.9);
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+
+    .emailContact {
+      background-color: var(--clrTransparentBG);
+      padding: 0.4em 1em;
+      border-radius: 0.5em;
+      display: grid;
+      grid-template: auto auto / min-content auto;
+
+      .name {
+        grid-area: 1/1/2/-1;
+        font-weight: 900;
+      }
+
+      .position {
+        grid-area: 2/1/-1/2;
+        font-size: calc(var(--fontSize2) * 0.6);
+        font-weight: 100;
+        font-style: italic;
+        white-space: nowrap;
+        align-self: flex-end;
+      }
+
+      .email {
+        justify-self: end;
+      }
+    }
+  }
+}
