@@ -13,6 +13,7 @@
 
     .title {
       justify-self: start;
+      user-select: none;
     }
 
     form {
@@ -40,6 +41,7 @@
         padding: 0.3em 0.5em;
         border-radius: 0.5em;
         background-color: var(--clrButtonGreen);
+        cursor: pointer;
       }
     }
   }
@@ -54,6 +56,7 @@
     border-radius: 0.5em;
     padding: 0.5em;
     gap: 0.3em;
+    user-select: none;
 
     .title {
       font-weight: 900;
@@ -68,6 +71,7 @@
     .phone {
       font-size: var(--fontSize2);
       font-weight: 900;
+      user-select: text;
     }
   }
 
@@ -91,6 +95,7 @@
       .name {
         grid-area: 1/1/2/-1;
         font-weight: 900;
+        user-select: none;
       }
 
       .position {
@@ -100,10 +105,12 @@
         font-style: italic;
         white-space: nowrap;
         align-self: flex-end;
+        user-select: none;
       }
 
       .email {
         justify-self: end;
+        user-select: auto;
       }
     }
   }

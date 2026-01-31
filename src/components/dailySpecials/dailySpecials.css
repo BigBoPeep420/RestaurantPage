@@ -10,7 +10,8 @@
   border-radius: 0.5rem;
   gap: 0.4rem;
   padding: 0.4rem;
-  outline: solid 0.15rem rgb(from var(--clrHLNeut) r g b / 0.5);
+  outline: solid 0.15rem rgb(from var(--clrTomatoRed) r g b / 0.5);
+  user-select: none;
 
   .titleCont {
     grid-column: 1 / -1;
@@ -19,16 +20,18 @@
     .title {
       font-size: var(--fontSize3);
       font-weight: 900;
+      color: var(--clrTomatoRed);
     }
     .discount {
       font-size: calc(var(--fontSize3) * 0.9);
+      color: rgb(from var(--clrTomatoRed) r g b / 0.8);
     }
   }
 
   .special {
     background: radial-gradient(
       ellipse closest-corner,
-      #4d4d4d 10%,
+      rgb(from var(--clrTomatoRed) r g b / 0.2) 10%,
       transparent 70%
     );
     border-radius: 0.2rem;
@@ -37,11 +40,13 @@
     .day {
       font-size: calc(var(--fontSize3) * 0.9);
       font-style: italic;
+      color: var(--clrTomatoRed);
     }
     .dish {
       font-size: var(--fontSize3);
       font-weight: 900;
       white-space: nowrap;
+      color: var(--clrTomatoRed);
     }
   }
 

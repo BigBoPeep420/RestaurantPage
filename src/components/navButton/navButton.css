@@ -1,5 +1,6 @@
 .navButton {
   filter: drop-shadow(2px 4px 5px #000000d7);
+  transition: scale 0.3s ease-out;
 
   button {
     width: calc(var(--fontSize1) * 2.5);
@@ -9,11 +10,10 @@
     background-color: transparent;
     border-radius: 50%;
     position: relative;
+    cursor: pointer;
 
     span {
-      background-color: rgb(
-        from var(--clrTomatoRed) calc(r * 0) calc(g * 0.5) calc(b * 0.5) / 0.6
-      );
+      background-color: #000000ab;
       clip-path: var(--cutClipPath2);
       display: block;
       height: min-content;
@@ -21,9 +21,10 @@
       top: calc(0px + 30%);
       left: 50%;
       translate: -50% 0;
-      font-size: var(--fontSize3);
+      font-size: calc(var(--fontSize3) * 1.1);
       padding: 0.1rem 0.2rem;
       border-radius: 0.2rem;
+      font-weight: 900;
     }
   }
 }
@@ -39,18 +40,23 @@
   content: "";
   position: absolute;
   bottom: -10%;
-  left: 10%;
+  left: 0%;
   width: 100%;
   height: 100%;
-  background: radial-gradient(
-    circle,
-    rgba(139, 80, 80, 0.4) 60%,
-    transparent 70%
-  );
-  transform: scaleX(0.7);
+  background:
+    radial-gradient(circle, rgba(146, 48, 48, 0.315) 50%, transparent 70%),
+    radial-gradient(ellipse 8% 15% at 65% 70%, #ffeb93 30%, transparent 50%),
+    radial-gradient(ellipse 8% 12% at 40% 65%, #ffeb93 30%, transparent 50%),
+    radial-gradient(ellipse 70% 30% at 40% 85%, #fcfcfc96 5%, transparent 20%);
+  filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.3));
+  transform: scaleX(0.9);
   z-index: -1;
   opacity: 0;
   animation: juiceOut 1s ease-out 1s forwards;
+}
+
+.navButton:hover {
+  scale: 1.1;
 }
 
 @keyframes bite {
@@ -128,8 +134,3 @@
     scale: 0.7 0.7;
   }
 }
-
-/* mask-image:
-      radial-gradient(circle at 85% 90%, transparent 20%, black 21%),
-      radial-gradient(circle at 50% 85%, transparent 25%, black 26%),
-      radial-gradient(circle at 20% 95%, transparent 20%, black 21%); */

@@ -8,11 +8,11 @@
 :root {
   --mainBGImg: url("../assets/images/mainBG.webp");
 
-  --clrTomatoRed: #ca0000;
-  --clrButtonGreen: #3c6813;
+  --clrTomatoRed: #c92609;
+  --clrButtonGreen: #5b7a12;
   --clrHLNeut: #888888;
   --clrTransparentBG: #00000069;
-  --clrText: #cfcfcf;
+  --clrText: #afafaf;
 
   --fontSize1: clamp(0.8rem, calc(5dvw + 0.8rem), 2.5rem);
   --fontSize2: clamp(0.5rem, calc(2.5dvw + 0.5rem), 1.5rem);
@@ -53,4 +53,14 @@
   box-sizing: border-box;
   font-family: Merienda;
   color: var(--clrText);
+}
+
+a {
+  color: var(--clrTomatoRed);
+  transition: color 0.3s ease-out;
+}
+a:hover {
+  color: rgb(
+    from var(--clrTomatoRed) calc(r * 0.7) calc(g * 0.7) calc(b * 0.7)
+  );
 }

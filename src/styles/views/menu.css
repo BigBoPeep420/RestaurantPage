@@ -1,9 +1,3 @@
-body {
-  #content {
-    padding: 0;
-  }
-}
-
 .menu:not(.navButton) {
   display: flex;
   flex-direction: column;
@@ -21,6 +15,7 @@ body {
     padding: 0.5em;
     border-radius: 0.5em;
     text-align: center;
+    user-select: none;
   }
 
   .menuOption {
@@ -67,10 +62,13 @@ body {
       position: sticky;
       top: 0;
       text-align: center;
-      background-color: #111;
+      background-color: rgb(
+        from var(--clrTomatoRed) calc(r * 0.5) calc(g * 0.5) calc(b * 0.5)
+      );
       margin: 0 -1em 1em -1em;
       align-content: center;
       z-index: 10;
+      user-select: none;
     }
 
     .optionsGrid {
@@ -91,7 +89,9 @@ body {
       top: var(--sectionHeaderHeight);
       height: 6dvh;
       text-align: center;
-      background-color: #111;
+      background-color: rgb(
+        from var(--clrTomatoRed) calc(r * 0.5) calc(g * 0.5) calc(b * 0.5)
+      );
       margin: 0 -1em 1em -1em;
       align-content: center;
     }

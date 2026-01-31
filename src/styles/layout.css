@@ -1,10 +1,10 @@
 body {
+  background-color: rgb(20, 20, 20);
   background-image: var(--mainBGImg);
   background-size: auto 100%;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: clamp(calc(0% - 300px), 50%, 70%) 0px;
-  background-color: bisque;
   height: 100dvh;
   width: 100dvw;
   overflow: hidden;
@@ -23,6 +23,8 @@ body {
 
     #siteTitle {
       width: min-content;
+      filter: drop-shadow(-2px -2px 1px rgba(255, 255, 255, 0.438))
+        drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.801));
     }
 
     nav {
@@ -45,11 +47,25 @@ body {
     anchor-name: --contentAnc;
   }
 
+  #content.menuView {
+    padding: 0;
+  }
+
   footer {
     grid-row: 3 / -1;
     background-color: var(--clrTransparentBG);
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     margin-top: 0.5rem;
+    user-select: none;
+    padding: 0.3em;
+    font-weight: 900;
+    font-size: var(--fontSize3);
+    p {
+      color: var(--clrTomatoRed);
+      span {
+        color: inherit;
+      }
+    }
   }
 }

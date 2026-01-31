@@ -1,18 +1,29 @@
 .siteTitle {
-  background-color: #000000ab;
+  user-select: none;
+  background-color: #414141;
   width: min-content;
   height: min-content;
   white-space: nowrap;
   padding: 0.2rem;
   clip-path: var(--cutClipPath1);
+
   .inner {
-    background-color: #00000063;
+    background-color: #0f0f0f98;
     width: 100%;
     height: 100%;
     padding: 0.4rem 1.5rem;
     clip-path: var(--cutClipPath1);
+
     p {
       font-size: var(--fontSize1);
+      filter: drop-shadow(-2px -2px 1px #ffffff8a)
+        drop-shadow(2px 2px 1px #000000f8);
+    }
+
+    p::first-letter {
+      color: var(--clrTomatoRed);
+      font-weight: 900;
+      font-size: calc(var(--fontSize1) * 1.2);
     }
   }
 }
