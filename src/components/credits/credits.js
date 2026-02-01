@@ -15,6 +15,11 @@ const credits = [
     src: "https://pngtree.com/freepng/red-tomato-slice-showing-seeds-and-flesh-cross-section-view_22650364.html",
     id: "pngtree",
   },
+  {
+    images: "Icons for Close and Reservation Btns",
+    src: "https://www.pictogrammers.com",
+    id: "picto",
+  },
 ];
 
 export default function () {
@@ -57,7 +62,17 @@ function creditsPopover() {
     link.href = cred.src;
     link.target = "_blank";
     link.rel = "noopener noreferrer";
-    link.text = cred.id == "vecteezy" ? "www.vecteezy.com" : "www.pngtree.com";
+    switch (cred.id) {
+      case "picto":
+        link.text = "www.pictogrammers.com";
+        break;
+      case "pngtree":
+        link.text = "www.pngtree.com";
+        break;
+      default:
+        link.text = "www.vecteezy.com";
+        break;
+    }
 
     const label = dc("label");
     label.htmlFor = cred.id;

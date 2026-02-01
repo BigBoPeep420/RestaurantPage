@@ -11,14 +11,46 @@
 .creditsPopover {
   margin: auto;
   width: min(650px, 90dvw);
+  padding: 0.2em;
+  background-color: rgb(102, 102, 102);
+  font-size: var(--fontSize3);
+  border-radius: 1em;
+  outline: solid 1px var(--clrTomatoRed);
 
   .inner {
     height: 100%;
+    background-color: rgb(20, 20, 20);
+    border-radius: 1em;
+    padding: 1em 2em;
+
+    .title {
+      text-align: center;
+      font-weight: 900;
+      font-size: var(--fontSize2);
+      p:last-of-type {
+        font-size: calc(var(--fontSize2) * 0.8);
+        font-weight: 100;
+      }
+    }
+
+    .credits {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5em;
+      .credit {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+
     button {
-      width: min(60px, 10dvw);
-      height: min(60px, 10dvw);
+      width: min(45px, 6dvw);
+      height: min(45px, 6dvw);
       flex-shrink: 1;
       border-radius: 0.5em;
+      background-color: var(--clrTomatoRed);
 
       svg {
         width: 100%;
@@ -31,11 +63,18 @@
 .creditsPopover:popover-open {
   .inner {
     display: flex;
+    gap: 1em;
     flex-direction: column;
-    height: 100%;
+    align-items: center;
+    height: min-content;
 
     button {
       align-self: flex-end;
     }
   }
+}
+
+.creditsPopover:popover-open::backdrop {
+  background-color: rgba(0, 0, 0, 0.575);
+  backdrop-filter: blur(5px);
 }

@@ -9,6 +9,10 @@
   p {
     font-size: var(--fontSize3);
   }
+  p:first-of-type {
+    font-size: calc(var(--fontSize3) * 1.2);
+    font-weight: 900;
+  }
 
   .bookBtn {
     grid-column: 2/-1;

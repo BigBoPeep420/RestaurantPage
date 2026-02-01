@@ -63,7 +63,7 @@
       top: 0;
       text-align: center;
       background-color: rgb(
-        from var(--clrTomatoRed) calc(r * 0.5) calc(g * 0.5) calc(b * 0.5)
+        from var(--clrTomatoRed) calc(r * 0.7) calc(g * 0.7) calc(b * 0.7)
       );
       margin: 0 -1em 1em -1em;
       align-content: center;
